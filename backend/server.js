@@ -14,8 +14,6 @@ app.use((err, req, res, next) => {
 const HOST = 'localhost'
 const PORT = 3000;
 
-
-// API ALAT
 // API ALAT
 app.get('/api/alat', async (req, res) => {
   try {
