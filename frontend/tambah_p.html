@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tambah Peminjaman</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body>
+    <header
+        class="bg-blue-600 text-white px-4 sm:px-5 py-3 sm:py-4 flex justify-between items-center gap-3 sticky top-0 z-10">
+        <div class="flex items-center gap-3">
+            <h1 class="text-xl font-bold">UKT</h1>
+        </div>
+    </header>
+
+    <div class="flex flex-col md:flex-row min-h-[calc(100vh-72px)]">
+        <aside id="sidebarMenu"
+            class="hidden md:block w-full md:w-56 bg-white border-b-2 md:border-b-0 md:border-r-2 border-blue-800 flex-shrink-0">
+            <nav class="block">
+                <a href="kategori.html" class="block px-4 py-3 border-b border-gray-300 hover:bg-blue-100">
+                    DATA KATEGORI
+                </a>
+                <a href="alat.html" class="block px-4 py-3 border-b border-gray-300 hover:bg-blue-100">
+                    DATA ALAT
+                </a>
+                <a href="tambah_a.html" class="block px-4 py-3 border-b border-gray-300 hover:bg-blue-100">
+                    TAMBAH ALAT
+                </a>
+                <a href="peminjaman.html" class="block px-4 py-3 border-b border-gray-300 hover:bg-blue-100">
+                    PEMINJAMAN
+                </a>
+                <a href="tambah_p.html" class="block px-4 py-3 border-b border-gray-300 hover:bg-blue-100">
+                    TAMBAH PEMINJAMAN
+                </a>
+            </nav>
+        </aside>
+
+        <main class="container">
+            <div id="message-area2" class="mb-4"></div>
+            <div
+                class="bg-white border rounded-lg p-4 mb-5 shadow-md hover:-translate-y-1 hover:shadow-lg duration-300">
+                <h2 id="judulHalaman" class="text-2xl sm:text-3xl font-bold">TAMBAH PEMINJAMAN</h2>
+                <form id="form-tambah-peminjaman">
+
+                    <div class="form-grid">
+                        <div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Alat</label>
+                                <select id="id_alat"
+                                    class="w-full border border-gray-300 rounded-lgpx-4 py-2.5 text-sm bg-white">
+                                    <option value="" disabled selected>-- Memuat Alat... --</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Nama Peminjam</label>
+                                <input type="text" id="nama_peminjam" placeholder="Contoh: Rayyan"
+                                    class="w-full border p-2 rounded hover:border-blue-500 duration-200" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Kelas</label>
+                                <input type="text" id="kelas" placeholder="Contoh: XI RPL C"
+                                    class="w-full border p-2 rounded hover:border-blue-500 duration-200" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Pinjam</label>
+                                <input type="date" id="tanggal_pinjam" placeholder="Contoh: 2024-06-01"
+                                    class="w-full border p-2 rounded hover:border-blue-500 duration-200" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Tanggal Kembali</label>
+                                <input type="date" id="tanggal_kembali" placeholder="Contoh: 2024-06-08"
+                                    class="w-full border p-2 rounded hover:border-blue-500 duration-200">
+                            </div>
+                            <div class="form-group">
+                                <label>Jumlah</label>
+                                <input type="number" id="jumlah" placeholder="Contoh: 1"
+                                    class="w-full border p-2 rounded hover:border-blue-500 duration-200" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Alat</label>
+                                <select id="id_status"
+                                    class="w-full border border-gray-300 rounded-lgpx-4 py-2.5 text-sm bg-white">
+                                   <option value="Dipinjam">Dipinjam</option>
+                    <option value="Dikembalikan">Dikembalikan</option>
+                    <option value="Terlambat">Terlambat</option>
+                                </select>
+                            </div>
+
+                            <div style="margin-top: 25px; text-align: right;">
+                                <button type="submit"
+                                    class="btn btn-primary border rounded-md px-2 bg-blue-600 text-white"
+                                    id="submit">Tambah</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
